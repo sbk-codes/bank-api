@@ -18,7 +18,7 @@ class Api::V1::AccountsController < ApplicationController
     if @account
       render_api_success(serializer, @account)
     else
-      render_api_error(account.errors.full_messages, 404)
+      render_api_error(account.errors.full_messages, :not_found)
     end
   end
 
@@ -26,7 +26,7 @@ class Api::V1::AccountsController < ApplicationController
     if @account
       render_api_success(serializer, @account)
     else
-      render_api_error(account.errors.full_messages, 404)
+      render_api_error(account.errors.full_messages, :not_found)
     end
   end
 
@@ -62,7 +62,7 @@ class Api::V1::AccountsController < ApplicationController
   end
 
   def set_account
-    @account = current_user.accounts.find(id: params[:id])
+    @account = current_user.accounts.find_by!(id: params[:id])
   end
 
   def account_params
