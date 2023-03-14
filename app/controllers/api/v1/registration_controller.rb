@@ -17,6 +17,6 @@ class Api::V1::RegistrationController < ApplicationController
   end
 
   def register_params
-    params.except(:format).permit(:first_name, :last_name, :email, :password)
+    params.except(:format).permit(:name, :email, :password)
   end
 end
