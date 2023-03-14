@@ -7,6 +7,8 @@ class Account < ApplicationRecord
 
   after_create :generate_initial_deposit
 
+  validates_presence_of :name
+
   def withdraw(amount)
     self.balance -= amount
     save
