@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2023_03_14_173517) do
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
+    t.string "name", default: "", null: false
     t.bigint "user_id", null: false
     t.float "balance", default: 0.0, null: false
     t.datetime "created_at", precision: 6, null: false
@@ -49,6 +50,4 @@ ActiveRecord::Schema.define(version: 2023_03_14_173517) do
   end
 
   add_foreign_key "accounts", "users"
-  add_foreign_key "transactions", "accounts", column: "from_account_id"
-  add_foreign_key "transactions", "accounts", column: "to_account_id"
 end
