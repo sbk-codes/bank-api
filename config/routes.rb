@@ -7,7 +7,13 @@ Rails.application.routes.draw do
       namespace :v1 do
           resources :registration, only: ['create']
           resources :sessions, only: %w[create destroy]
-          #resources :posts
+          resources :accounts, only: [:create, :index] do
+            member do
+              get :balance
+              get :transactions
+              post :transfer
+            end
+          end
         end
       end
     end
