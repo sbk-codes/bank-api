@@ -45,6 +45,7 @@ gem 'jwt', '~> 2.2', '>= 2.2.1'
 gem 'jsonapi-serializer', '~> 2.1.0'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
 gem 'rack-cors'
+gem 'rspec'
 group :development, :test do
   gem 'vcr', '~> 5.1'
   gem 'foreman', '~> 0.87.1'
