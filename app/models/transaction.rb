@@ -7,6 +7,7 @@ class Transaction < ApplicationRecord
   validate :sufficient_balance
 
   private
+
   def sufficient_balance
     if from_account.balance < amount
       errors.add(:base, 'Insufficient balance')

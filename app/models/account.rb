@@ -18,6 +18,7 @@ class Account < ApplicationRecord
   end
 
   private
+
   def generate_initial_deposit
     update(balance: rand(1000...3000))
   end

@@ -10,8 +10,6 @@ class Api::V1::SessionsController < ApplicationController
     end
   end
 
-  def destroy; end
-
   private
 
   def serializer
