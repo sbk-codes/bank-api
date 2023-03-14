@@ -2,7 +2,6 @@
 
 class Account < ApplicationRecord
   belongs_to :user
-  has_many :transactions
   has_many :from_transactions, class_name: 'Transaction', foreign_key: :from_account_id, dependent: :destroy
   has_many :to_transactions, class_name: 'Transaction', foreign_key: :to_account_id, dependent: :destroy
 

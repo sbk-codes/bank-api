@@ -24,7 +24,7 @@ class Api::V1::AccountsController < ApplicationController
 
   def transactions
     if @account
-      render_api_success(serializer, @account)
+      render_api_success(transaction_serializer, @account.from_transactions)
     else
       render_api_error(account.errors.full_messages, :not_found)
     end
