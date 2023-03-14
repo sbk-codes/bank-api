@@ -17,6 +17,6 @@ class Api::V1::RegistrationController < ApplicationController
   end
 
   def register_params
-    params.permit(:first_name, :last_name, :email, :password)
+    params.except(:json).permit(:first_name, :last_name, :email, :password)
   end
 end

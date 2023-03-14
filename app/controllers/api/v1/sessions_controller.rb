@@ -20,6 +20,6 @@ class Api::V1::SessionsController < ApplicationController
   end
 
   def session_params
-    params.permit(:email, :password)
+    params.except(:format).permit(:email, :password)
   end
 end
