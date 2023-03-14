@@ -66,6 +66,6 @@ class Api::V1::AccountsController < ApplicationController
   end
 
   def account_params
-    params.except(:json).permit(:name)
+    params.except(:format).permit(:name)
   end
 end

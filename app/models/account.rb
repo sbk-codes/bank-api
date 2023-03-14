@@ -9,15 +9,16 @@ class Account < ApplicationRecord
 
   def withdraw(amount)
     self.balance -= amount
-    self.save
+    save
   end
 
   def deposit(amount)
     self.balance += amount
-    self.save
+    save
   end
 
+  private
   def generate_initial_deposit
-    self.update(balance: rand(1000...3000))
+    update(balance: rand(1000...3000))
   end
 end

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     namespace :api, defaults: { format: :json } do
       namespace :v1 do
           resources :registration, only: ['create']
-          resources :sessions, only: %w[create destroy]
+          resources :sessions, only: %w[create]
           resources :accounts, only: [:create, :index] do
             member do
               get :balance
