@@ -1,7 +1,11 @@
 # README
 
-### documentation
+### Documentation
 https://documenter.getpostman.com/view/26358534/2s93JwMMff
+
+Test cases using ChaiJS - https://drive.google.com/file/d/1G7Ipzdgh51hZ617DmJOTMJGDbPqRjebr/view?usp=sharing
+
+-------------
 
 ### Objective
 
